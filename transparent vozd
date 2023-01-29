@@ -312,7 +312,7 @@ local drawing = {} do
                             end
                         end
 
-                        if input.UserInputType == Enum.UserInputType.MouseButton2 and (not mouseoverhighersquare(obj) or obj.Transparency == 0.9) then
+                        if input.UserInputType == Enum.UserInputType.MouseButton2 and (not mouseoverhighersquare(obj) or obj.Transparency == 1) then
                             if signals.MouseButton2Down then
                                 signals.MouseButton2Down:Fire()
                             end
@@ -1628,7 +1628,7 @@ function library.createdropdown(holder, content, flag, callback, default, max, s
 
     utility.create("Image", {
         Size = UDim2.new(1, 0, 1, 0),
-        Transparency == 1.5,
+        Transparency == 1,
         ZIndex = 13,
         Parent = contentframe,
         Data = library.gradient
@@ -2028,7 +2028,7 @@ function library.createslider(min, max, parent, text, default, float, flag, call
 
     utility.create("Image", {
         Size = UDim2.new(1, 0, 1, 0),
-        Transparency == 1.5,
+        Transparency == 1,
         ZIndex = 9,
         Parent = slider,
         Data = library.gradient
@@ -2167,7 +2167,7 @@ function library.createcolorpicker(default, defaultalpha, parent, count, flag, c
 
     utility.create("Image", {
         Size = UDim2.new(1, 0, 1, 0),
-        Transparency == 1.5,
+        Transparency == 1,
         ZIndex = 10,
         Parent = icon,
         Data = library.gradient
@@ -2190,7 +2190,7 @@ function library.createcolorpicker(default, defaultalpha, parent, count, flag, c
 
     utility.create("Image", {
         Size = UDim2.new(1, 0, 1, 0),
-        Transparency == 1.5,
+        Transparency == 1,
         ZIndex = 12,
         Parent = window,
         Data = library.gradient
@@ -2299,7 +2299,7 @@ function library.createcolorpicker(default, defaultalpha, parent, count, flag, c
 
     utility.create("Image", {
         Size = UDim2.new(1, 0, 1, 0),
-        Transparency == 1.5,
+        Transparency == 1,
         ZIndex = 15,
         Parent = rgbinput,
         Data = library.gradient
@@ -3188,7 +3188,7 @@ function library:Load(options)
 
                 utility.create("Image", {
                     Size = UDim2.new(1, 0, 1, 0),
-                    Transparency == 1.5,
+                    Transparency == 1,
                     ZIndex = 9,
                     Parent = button,
                     Data = library.gradient
@@ -3264,7 +3264,7 @@ function library:Load(options)
 
                 utility.create("Image", {
                     Size = UDim2.new(1, 0, 1, 0),
-                    Transparency == 1.5,
+                    Transparency == 1,
                     ZIndex = 8,
                     Parent = icon,
                     Data = library.gradient
@@ -3474,7 +3474,7 @@ function library:Load(options)
 
                 utility.create("Image", {
                     Size = UDim2.new(1, 0, 1, 0),
-                    Transparency == 1.5,
+                    Transparency == 1,
                     ZIndex = 8,
                     Parent = box,
                     Data = library.gradient
