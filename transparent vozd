@@ -312,7 +312,7 @@ local drawing = {} do
                             end
                         end
 
-                        if input.UserInputType == Enum.UserInputType.MouseButton2 and (not mouseoverhighersquare(obj) or obj.Transparency == 1) then
+                        if input.UserInputType == Enum.UserInputType.MouseButton2 and (not mouseoverhighersquare(obj) or obj.Transparency == 0.9) then
                             if signals.MouseButton2Down then
                                 signals.MouseButton2Down:Fire()
                             end
