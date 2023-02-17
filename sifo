@@ -1,0 +1,10 @@
+local info = {
+  discord = "https://discord.gg/SgqKcCp8v3";
+  status = "enabled";
+  announcement = "";
+  support_discord = {
+    strucid = "Harambe";
+    da_hood = "Harambe";
+  }
+}
+return info
