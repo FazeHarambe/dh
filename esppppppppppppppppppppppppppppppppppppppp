@@ -14,13 +14,13 @@ if not EspSettings then
 			Radius = 60,
 			Transparency = 0.3,
 			Selected = { -- set any of these to false to ignore them
-				Boxes = false,
-				Tracers = false,
-				Names = false,
-				Skeletons = false,
-				HealthBars = false,
-				HeadDots = false,
-				LookTracers = false
+				Boxes = true,
+				Tracers = true,
+				Names = true,
+				Skeletons = true,
+				HealthBars = true,
+				HeadDots = true,
+				LookTracers = true
 			}
 		},
 		Highlights = {
