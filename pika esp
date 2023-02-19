@@ -19,7 +19,7 @@ function AttachChams(parent, face)
 	Frame.Size = UDim2.new(1,0,1,0)
 end
 
-getgenv().PikaESPSettings = {
+getgenv().NiggaEspSet = {
     Box = false,
     Name = false,
     Tracers = false,
@@ -92,7 +92,7 @@ local function PikaESP(v)
             local HeadPosition = worldToViewportPoint(CurrentCamera, Head.Position + Vector3.new(0,0.5,0))
             local LegPosition = worldToViewportPoint(CurrentCamera, RootPart.Position - Vector3.new(0,3,0))
                 
-            if PikaESPSettings.Chams and v.Character.Head:FindFirstChild("Body") == nil then
+            if NiggaEspSet.Chams and v.Character.Head:FindFirstChild("Body") == nil then
                 for i,v in pairs(v.Character:GetChildren()) do
                     if v:IsA("MeshPart") or v.Name == "Head" then
                         AttachChams(v, "Back")
@@ -106,7 +106,7 @@ local function PikaESP(v)
             end
 
             if onScreen then
-                if PikaESPSettings.Box then
+                if NiggaEspSet.Box then
                     BoxOutline.Size = Vector2.new(2500 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
                     BoxOutline.Position = Vector2.new(RootPosition.X - BoxOutline.Size.X / 2, RootPosition.Y - BoxOutline.Size.Y / 2)
                     BoxOutline.Visible = true
@@ -129,8 +129,8 @@ local function PikaESP(v)
                     HealthBarOutline.Visible = false
                     HealthBar.Visible = false
                 end
-                if PikaESPSettings.Tracers then
-                    if PikaESPSettings.UnlockTracers then
+                if NiggaEspSet.Tracers then
+                    if NiggaEspSet.UnlockTracers then
                         Tracer.From = Vector2.new(mouse.X, mouse.Y + 36)
                     else
                         Tracer.From = Vector2.new(camera.ViewportSize.X / 2, camera.ViewportSize.Y / 1)
@@ -140,26 +140,26 @@ local function PikaESP(v)
                 else
                     Tracer.Visible = false
                 end
-                if PikaESPSettings.Name then
+                if NiggaEspSet.Name then
                     Name.Text = tostring(v.Name)
                     Name.Position = Vector2.new(workspace.Camera:WorldToViewportPoint(v.Character.Head.Position).X, workspace.Camera:WorldToViewportPoint(v.Character.Head.Position).Y - 30)
                     Name.Visible = true
-                    Name.Size = PikaESPSettings.TextSize
-                    if PikaESPSettings.Font == "UI" then
+                    Name.Size = NiggaEspSet.TextSize
+                    if NiggaEspSet.Font == "UI" then
                         Name.Font = 0
                         Gun.Font = 0
-                    elseif PikaESPSettings.Font == "System" then
+                    elseif NiggaEspSet.Font == "System" then
                         Name.Font = 1
                         Gun.Font = 1
-                    elseif PikaESPSettings.Font == "Plex" then
+                    elseif NiggaEspSet.Font == "Plex" then
                         Name.Font = 2
                         Gun.Font = 2
-                    elseif PikaESPSettings.Font == "Monospace" then
+                    elseif NiggaEspSet.Font == "Monospace" then
                         Name.Font = 3
                         Gun.Font = 3
                     end
-                    Gun.Size = PikaESPSettings.TextSize
-                    Gun.Text = tostring("tay.xyz")
+                    Gun.Size = NiggaEspSet.TextSize
+                    Gun.Text = tostring("chromium.cc")
                     Gun.Position = Vector2.new(LegPosition.X, LegPosition.Y + 10)
                     Gun.Visible = true
                 else
