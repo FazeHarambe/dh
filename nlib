@@ -49,8 +49,6 @@ local TweenDirection = Enum.EasingDirection.Out;
 
 local LastTick = tick();
 
-Actyrn7104 = "Discord: Actyrn#7104, Server: .gg/wDngb2mv4H";
-
 local function CalculateBounds(TableOfObjects)
 	local TableOfObjects = typeof(TableOfObjects) == "table" and TableOfObjects or {};
 	local X, Y = 0, 0;
