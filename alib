@@ -39,7 +39,6 @@ library.theme = {
 	itemscolor = Color3.fromRGB(170, 170, 170),
 	itemscolor2 = Color3.fromRGB(255,255,255)
 }
-local _r = ("Discord: Actyrn#7104, Server: .gg/azuremodded OR .gg/wDngb2mv4H")
 
 if library.theme.cursor and Drawing then
 	local success = pcall(function() 
@@ -65,44 +64,6 @@ if library.theme.cursor and Drawing then
 		end)
 	elseif not success and library.cursor then
 		library.cursor:Remove()
-	end
-end
-
-function library:CheckErrors(error1, error2, ePlayer, v1, v2)
-	local message = "An error has been detected, please try again later"
-	local eCheck1, client = function(err1)
-		if err1 then
-			local errorCheck1 = {
-				error57 = err1
-			}
-			if not errorCheck1.error57 then
-				local PrintVal = function(val)
-					print(val)
-				end
-				PrintVal(message)
-			end
-			return err1
-		end
-		return nil
-	end, ePlayer
-	if error1 and error2 then
-		local err_Table, pCheck1 = {
-			err_1 = error1,
-			err_2 = error2
-		},
-		function(detected, reason)
-			detected:Kick(reason)
-		end
-		if not (err_Table.err_1 and err_Table.err_2) then
-			if client then
-				pCheck1(client, message)
-			end
-		end
-		if (err_Table.err_1 == error1) and (err_Table.err_2 == error2) then
-			if v1 ~= v2 then
-				pCheck1(client, message)
-			end
-		end
 	end
 end
 
